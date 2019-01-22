@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 圆角图片 -->
+    <declare-styleable name="YLCircleImageView">
+        <attr name="radius" format="dimension">圆角</attr>
+        <attr name="topLeftRadius" format="dimension">左上</attr>
+        <attr name="topRightRadius" format="dimension">右上</attr>
+        <attr name="bottomLeftRadius" format="dimension">左下</attr>
+        <attr name="bottomRightRadius" format="dimension">右下</attr>
+
+        <attr name="topLeftRadius_x" format="dimension">左上X轴</attr>
+        <attr name="topLeftRadius_y" format="dimension">左上Y轴</attr>
+
+        <attr name="topRightRadius_x" format="dimension">右上X轴</attr>
+        <attr name="topRightRadius_y" format="dimension">右上Y轴</attr>
+
+        <attr name="bottomLeftRadius_x" format="dimension">左下X轴</attr>
+        <attr name="bottomLeftRadius_y" format="dimension">左下Y轴</attr>
+
+        <attr name="bottomRightRadius_x" format="dimension">右下X轴</attr>
+        <attr name="bottomRightRadius_y" format="dimension">右下Y轴</attr>
+
+
+
+        <attr name="borderWidth" format="dimension">描边宽度</attr>
+        <attr name="borderColor" format="color">描边颜色</attr>
+        <attr name="borderSpace" format="dimension">描边与图片间距</attr>
+        <!-- 无论是什么展示形式，都会填充满整个控件，如果不想填充满，自己去改onDraw里面的 dst -->
+        <attr name="scaleType" format="enum">
+            <enum name="top" value="0">从图片顶部开始绘制，即肯定会展示图片顶部</enum>
+            <enum name="center" value="1">展示图片中心</enum>
+            <enum name="bottom" value="2">从图片底部开始绘制，即肯定会展示图片底部</enum>
+            <enum name="fitXY" value="3">完全展示，有可能变形</enum>
+        </attr>
+    </declare-styleable>
+</resources>
