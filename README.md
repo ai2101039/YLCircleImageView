@@ -35,4 +35,5 @@ allprojects {
 # 效果图
 
 ![GIF](https://github.com/ai2101039/YLCircleImageView/blob/master/screenshots/12.gif)
+
 ![GIF](https://github.com/ai2101039/YLCircleImageView/blob/master/screenshots/13.gif)
