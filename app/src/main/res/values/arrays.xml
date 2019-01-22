@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="imgType">
+        <item>普通</item>
+        <item>宽度大高度小</item>
+        <item>宽度小高度大</item>
+        <item>Gif</item>
+        <item>小图</item>
+    </string-array>
+
+    <string-array name="imgMode">
+        <item>TOP</item>
+        <item>CENTER</item>
+        <item>BOTTOM</item>
+        <item>FITXY</item>
+    </string-array>
+</resources>
