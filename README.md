@@ -37,3 +37,25 @@ allprojects {
 ![GIF](https://github.com/ai2101039/YLCircleImageView/blob/master/screenshots/12.gif)
 
 ![GIF](https://github.com/ai2101039/YLCircleImageView/blob/master/screenshots/13.gif)
+
+# 其他
+
+```
+这种写法表示，左上半径10，其他半径50
+        <com.android.library.YLCircleImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:radius="50dp"
+            app:topLeftRadius="10dp"/>
+```
+```
+这种写法表示，左上X轴20，左上Y轴10，其他半径50
+        <com.android.library.YLCircleImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:radius="50dp"
+            app:topLeftRadius="10dp"
+            app:topLeftRadius_x="20dp"/>
+```
+
+![属性图](https://github.com/ai2101039/YLCircleImageView/blob/master/screenshots/1.png)
