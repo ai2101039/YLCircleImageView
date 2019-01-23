@@ -69,6 +69,10 @@ public class YLCircleImageView extends android.support.v7.widget.AppCompatImageV
 
     /**
      * 图片展示方式
+     * 0 -- 图片顶部开始展示，铺满，如果Y轴铺满时，X轴大，则图片水平居中
+     * 1 -- 图片中心点与指定区域中心重合
+     * 2 -- 图片底部开始展示，铺满，如果Y轴铺满时，X轴大，则图片水平居中
+     * 3 -- 图片完全展示
      */
     public static final int TOP = 0;
     public static final int CENTER = 1;
@@ -115,7 +119,33 @@ public class YLCircleImageView extends android.support.v7.widget.AppCompatImageV
     }
 
     public void initData() {
+        initRadius();
+        //  判断是否需要绘制多边形
+        circle = borderWidth != 0 || borderSpace != 0 ||
+                topLeftRadius_x != 0 || topLeftRadius_y != 0 ||
+                topRightRadius_x != 0 || topRightRadius_y != 0 ||
+                bottomLeftRadius_x != 0 || bottomLeftRadius_y != 0 ||
+                bottomRightRadius_x != 0 || bottomRightRadius_y != 0;
+        
+        //  设置画笔
+        paint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
+        borderPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+        borderPaint.setStyle(Paint.Style.STROKE);
+        borderPaint.setStrokeWidth(borderWidth);
+        borderPaint.setColor(borderColor);
+
+        if (circle) {
+            //  为什么设置这一条，因为Glide中，在into 源码内
+            //  不同的 ScaleType 会对drawable进行压缩，一旦压缩了，我们在onDraw里面获取图片的大小就没有意义了
+            setScaleType(ScaleType.MATRIX);
+        }
+    }
+
+    /**
+     * 初始化半径
+     */
+    private void initRadius() {
         //  该处便于代码编写 如XML设置 radius = 20，topLeftRadius = 10，最终结果是  10 20 20 20
         if (radius != 0) {
             topLeftRadius = topLeftRadius == 0 ? radius : topLeftRadius;
@@ -135,29 +165,7 @@ public class YLCircleImageView extends android.support.v7.widget.AppCompatImageV
 
         bottomRightRadius_x = bottomRightRadius_x == 0 ? bottomRightRadius : bottomRightRadius_x;
         bottomRightRadius_y = bottomRightRadius_y == 0 ? bottomRightRadius : bottomRightRadius_y;
-
-        //  判断是否需要绘制多边形
-        circle = borderWidth != 0 || borderSpace != 0 ||
-                topLeftRadius_x != 0 || topLeftRadius_y != 0 ||
-                topRightRadius_x != 0 || topRightRadius_y != 0 ||
-                bottomLeftRadius_x != 0 || bottomLeftRadius_y != 0 ||
-                bottomRightRadius_x != 0 || bottomRightRadius_y != 0;
-
-        //  设置画笔
-        paint = new Paint(Paint.ANTI_ALIAS_FLAG);
-
-        borderPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-        borderPaint.setStyle(Paint.Style.STROKE);
-        borderPaint.setStrokeWidth(borderWidth);
-        borderPaint.setColor(borderColor);
-
-        if (circle) {
-            //  为什么设置这一条，因为Glide中，在into 源码内
-            //  不同的 ScaleType 会对drawable进行压缩，一旦压缩了，我们在onDraw里面获取图片的大小就没有意义了
-            setScaleType(ScaleType.MATRIX);
-        }
     }
-
 
     @SuppressLint("DrawAllocation")
     @Override
