@@ -120,13 +120,13 @@ public class YLCircleImageView extends android.support.v7.widget.AppCompatImageV
 
     public void initData() {
         initRadius();
-        //  判断是否需要绘制多边形
+        //  判断是否需要调用绘制函数
         circle = borderWidth != 0 || borderSpace != 0 ||
                 topLeftRadius_x != 0 || topLeftRadius_y != 0 ||
                 topRightRadius_x != 0 || topRightRadius_y != 0 ||
                 bottomLeftRadius_x != 0 || bottomLeftRadius_y != 0 ||
                 bottomRightRadius_x != 0 || bottomRightRadius_y != 0;
-        
+
         //  设置画笔
         paint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
@@ -153,7 +153,8 @@ public class YLCircleImageView extends android.support.v7.widget.AppCompatImageV
             bottomLeftRadius = bottomLeftRadius == 0 ? radius : bottomLeftRadius;
             bottomRightRadius = bottomRightRadius == 0 ? radius : bottomRightRadius;
         }
-
+        //  如果设置了 radius = 20，topLeftRadius = 10，topLeftRadius_x = 30,
+        //  最终结果，topLeftRadius_x = 30，topLeftRadius_y = 10，其余 20
         topLeftRadius_x = topLeftRadius_x == 0 ? topLeftRadius : topLeftRadius_x;
         topLeftRadius_y = topLeftRadius_y == 0 ? topLeftRadius : topLeftRadius_y;
 
@@ -237,7 +238,7 @@ public class YLCircleImageView extends android.support.v7.widget.AppCompatImageV
 
         int left = 0, top = 0, right = 0, bottom = 0;
 
-        //  判断 bw/bh 与 vw/vh
+        //  判断 bw/bh 与 rw/rh
         int temp1 = bw * rh;
         int temp2 = rw * bh;
 
