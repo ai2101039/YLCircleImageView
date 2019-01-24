@@ -24,7 +24,8 @@ allprojects {
 ```
 
 ```
-    implementation 'com.github.ai2101039:YLCircleImageView:v1.0.4'
+    现在最新版本是 v1.0.5，以后可能会更新，所以大家需要看一下 release版本
+    implementation 'com.github.ai2101039:YLCircleImageView:v1.0.5'
 ```
 
 ```
