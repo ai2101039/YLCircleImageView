@@ -307,14 +307,24 @@ public class YLCircleImageView extends android.support.v7.widget.AppCompatImageV
         Path path = new Path();
         path.addRoundRect(rectF,
                 new float[]{
-                        topLeftRadius_x - offset, topLeftRadius_y - offset,
-                        topRightRadius_x - offset, topRightRadius_y - offset,
-                        bottomRightRadius_x - offset, bottomRightRadius_y - offset,
-                        bottomLeftRadius_x - offset, bottomLeftRadius_y - offset}, Path.Direction.CW);
+                        offsetRadius(topLeftRadius_x, offset), offsetRadius(topLeftRadius_y, offset),
+                        offsetRadius(topRightRadius_x, offset), offsetRadius(topRightRadius_y, offset),
+                        offsetRadius(bottomRightRadius_x, offset), offsetRadius(bottomRightRadius_y, offset),
+                        offsetRadius(bottomLeftRadius_x, offset), offsetRadius(bottomLeftRadius_y, offset)}, Path.Direction.CW);
         path.close();
         canvas.drawPath(path, paint);
     }
 
+    /**
+     * 计算半径偏移值，必须大于等于0
+     *
+     * @param radius 半径
+     * @param offset 偏移量
+     * @return 偏移半径
+     */
+    private float offsetRadius(float radius, float offset) {
+        return Math.max(radius - offset, 0);
+    }
 
     /**
      * drawable 转 bitmap
