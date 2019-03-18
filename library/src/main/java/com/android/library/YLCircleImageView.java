@@ -378,6 +378,10 @@ public class YLCircleImageView extends android.support.v7.widget.AppCompatImageV
         this.styleType = styleType;
     }
 
+    public void setCircle(boolean circle) {
+        this.circle = circle;
+    }
+
     public void setBorderWidth(float borderWidth) {
         this.borderWidth = borderWidth;
         borderPaint.setStrokeWidth(borderWidth);
