@@ -23,10 +23,10 @@ allprojects {
 }
 ```
 
-### 现在最新版本是 v1.0.5，以后可能会更新，所以大家需要看一下 release版本
+### 现在最新版本是 v1.0.6，以后可能会更新，所以大家需要看一下 release版本
     
 ```
-    implementation 'com.github.ai2101039:YLCircleImageView:v1.0.5'
+    implementation 'com.github.ai2101039:YLCircleImageView:v1.0.6'
 ```
 
 ```
@@ -35,6 +35,32 @@ allprojects {
         android:layout_height="100dp"
         app:radius="50dp"/>
 ```
+
+### 在v1.0.6中增加XML设置
+
+增加了对Circle属性变量的设置，原本想做成 build模式，后来想了想没有必要。
+
+大家记得如果你要绘制圆角，一定要 circle 设置为 true。 
+
+```
+                //  设置图片格式
+                ylCircleImageView.setStyleType(YLCircleImageView.TOP);
+                //  设置圆角，这里可设置八个角度大小
+                ylCircleImageView.setRadius(20F);
+                //  设置描边宽度
+                ylCircleImageView.setBorderWidth(10F);
+                //  设置描边颜色
+                ylCircleImageView.setBorderColor(Color.WHITE);
+                //  设置描边与图片的间距
+                ylCircleImageView.setBorderSpace(5F);
+                //  重要：设置circle为真，切记一定要带着这一条
+                ylCircleImageView.setCircle(true);
+                //  重绘
+                ylCircleImageView.invalidate();
+                
+```
+
+
 
 # 效果图
 
