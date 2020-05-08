@@ -1,5 +1,7 @@
 # YLCircleImageView
 
+[![](https://www.jitpack.io/v/ai2101039/YLCircleImageView.svg)](https://www.jitpack.io/#ai2101039/YLCircleImageView)
+
 如果依赖失败，可以直接下载Library中的YLCircleImageView 和 style.xml放入项目中
 
 QQ:375984181
@@ -23,10 +25,10 @@ allprojects {
 }
 ```
 
-### 现在最新版本是 v1.0.6，以后可能会更新，所以大家需要看一下 release版本
+### 现在最新版本是 v1.0.7，解决了AndroidX的属性检查问题
     
 ```
-    implementation 'com.github.ai2101039:YLCircleImageView:v1.0.6'
+    implementation 'com.github.ai2101039:YLCircleImageView:v1.0.7'
 ```
 
 ```
