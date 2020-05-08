@@ -35,7 +35,7 @@ allprojects {
     <com.android.library.YLCircleImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        app:radius="50dp"/>
+        app:radiusYL="50dp"/>
 ```
 
 ### 在v1.0.6中增加XML设置
@@ -77,17 +77,17 @@ allprojects {
         <com.android.library.YLCircleImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            app:radius="50dp"
-            app:topLeftRadius="10dp"/>
+            app:radiusYL="50dp"
+            app:topLeftRadiusYL="10dp"/>
 ```
 ```
 这种写法表示，左上X轴20，左上Y轴10，其他半径50
         <com.android.library.YLCircleImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            app:radius="50dp"
-            app:topLeftRadius="10dp"
-            app:topLeftRadius_x="20dp"/>
+            app:radiusYL="50dp"
+            app:topLeftRadiusYL="10dp"
+            app:topLeftRadius_xYL="20dp"/>
 ```
 
 ![属性图](https://github.com/ai2101039/YLCircleImageView/blob/master/screenshots/1.png)
