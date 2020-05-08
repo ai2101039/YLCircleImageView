@@ -69,7 +69,7 @@
             android:layout_height="100dp"
             android:layout_gravity="center_horizontal"
             android:layout_toRightOf="@id/sbTopLeft"
-            app:radius="50dp"/>
+            app:radiusYL="50dp"/>
 
         <SeekBar
             android:id="@+id/sbTopRight"

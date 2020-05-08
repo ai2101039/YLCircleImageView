@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AndroidStudioProjects-YLCircleImageView.iml" filepath="$PROJECT_DIR$/AndroidStudioProjects-YLCircleImageView.iml" group="YLCircleImageView" />
       <module fileurl="file://$PROJECT_DIR$/YLCircleImageView.iml" filepath="$PROJECT_DIR$/YLCircleImageView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/YLCircleImageView-app.iml" filepath="$PROJECT_DIR$/app/YLCircleImageView-app.iml" group="YLCircleImageView/app" />
+      <module fileurl="file://$PROJECT_DIR$/library/YLCircleImageView-library.iml" filepath="$PROJECT_DIR$/library/YLCircleImageView-library.iml" group="YLCircleImageView/library" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
     </modules>

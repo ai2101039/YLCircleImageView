@@ -91,27 +91,27 @@ public class YLCircleImageView extends android.support.v7.widget.AppCompatImageV
     private void initAttrs(AttributeSet attrs) {
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.YLCircleImageView);
         //  半径
-        radius = ta.getDimension(R.styleable.YLCircleImageView_radius, 0);
-        topLeftRadius = ta.getDimension(R.styleable.YLCircleImageView_topLeftRadius, 0);
-        topRightRadius = ta.getDimension(R.styleable.YLCircleImageView_topRightRadius, 0);
-        bottomLeftRadius = ta.getDimension(R.styleable.YLCircleImageView_bottomLeftRadius, 0);
-        bottomRightRadius = ta.getDimension(R.styleable.YLCircleImageView_bottomRightRadius, 0);
+        radius = ta.getDimension(R.styleable.YLCircleImageView_radiusYL, 0);
+        topLeftRadius = ta.getDimension(R.styleable.YLCircleImageView_topLeftRadiusYL, 0);
+        topRightRadius = ta.getDimension(R.styleable.YLCircleImageView_topRightRadiusYL, 0);
+        bottomLeftRadius = ta.getDimension(R.styleable.YLCircleImageView_bottomLeftRadiusYL, 0);
+        bottomRightRadius = ta.getDimension(R.styleable.YLCircleImageView_bottomRightRadiusYL, 0);
         //  展示类型
-        styleType = ta.getInt(R.styleable.YLCircleImageView_scaleType, TOP);
+        styleType = ta.getInt(R.styleable.YLCircleImageView_scaleTypeYL, TOP);
         //  描边
-        borderWidth = ta.getDimension(R.styleable.YLCircleImageView_borderWidth, 0);
-        borderSpace = ta.getDimension(R.styleable.YLCircleImageView_borderSpace, 0);
-        borderColor = ta.getColor(R.styleable.YLCircleImageView_borderColor, Color.WHITE);
+        borderWidth = ta.getDimension(R.styleable.YLCircleImageView_borderWidthYL, 0);
+        borderSpace = ta.getDimension(R.styleable.YLCircleImageView_borderSpaceYL, 0);
+        borderColor = ta.getColor(R.styleable.YLCircleImageView_borderColorYL, Color.WHITE);
 
         //  不常用属性
-        topLeftRadius_x = ta.getDimension(R.styleable.YLCircleImageView_topLeftRadius_x, 0);
-        topLeftRadius_y = ta.getDimension(R.styleable.YLCircleImageView_topLeftRadius_y, 0);
-        topRightRadius_x = ta.getDimension(R.styleable.YLCircleImageView_topRightRadius_x, 0);
-        topRightRadius_y = ta.getDimension(R.styleable.YLCircleImageView_topRightRadius_y, 0);
-        bottomLeftRadius_x = ta.getDimension(R.styleable.YLCircleImageView_bottomLeftRadius_x, 0);
-        bottomLeftRadius_y = ta.getDimension(R.styleable.YLCircleImageView_bottomLeftRadius_y, 0);
-        bottomRightRadius_x = ta.getDimension(R.styleable.YLCircleImageView_bottomRightRadius_x, 0);
-        bottomRightRadius_y = ta.getDimension(R.styleable.YLCircleImageView_bottomRightRadius_y, 0);
+        topLeftRadius_x = ta.getDimension(R.styleable.YLCircleImageView_topLeftRadius_xYL, 0);
+        topLeftRadius_y = ta.getDimension(R.styleable.YLCircleImageView_topLeftRadius_yYL, 0);
+        topRightRadius_x = ta.getDimension(R.styleable.YLCircleImageView_topRightRadius_xYL, 0);
+        topRightRadius_y = ta.getDimension(R.styleable.YLCircleImageView_topRightRadius_yYL, 0);
+        bottomLeftRadius_x = ta.getDimension(R.styleable.YLCircleImageView_bottomLeftRadius_xYL, 0);
+        bottomLeftRadius_y = ta.getDimension(R.styleable.YLCircleImageView_bottomLeftRadius_yYL, 0);
+        bottomRightRadius_x = ta.getDimension(R.styleable.YLCircleImageView_bottomRightRadius_xYL, 0);
+        bottomRightRadius_y = ta.getDimension(R.styleable.YLCircleImageView_bottomRightRadius_yYL, 0);
 
         ta.recycle();
 
