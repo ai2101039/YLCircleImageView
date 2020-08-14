@@ -24,12 +24,13 @@ allprojects {
     }
 }
 ```
+### 现在最新版本是 v1.0.8，解决了drawable 有时 width 和 height 为0 导致的崩溃
 
-### 现在最新版本是 v1.0.7，解决了AndroidX的属性检查问题
-    
 ```
-    implementation 'com.github.ai2101039:YLCircleImageView:v1.0.7'
+    implementation 'com.github.ai2101039:YLCircleImageView:v1.0.8'
 ```
+
+### v1.0.7，解决了AndroidX的属性检查问题
 
 ```
     <com.android.library.YLCircleImageView
