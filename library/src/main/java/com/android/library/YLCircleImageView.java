@@ -194,7 +194,7 @@ public class YLCircleImageView extends android.support.v7.widget.AppCompatImageV
 
         }
 
-        if ((null != drawable && circle)) {
+        if (drawableDisable(drawable) && circle) {
             RectF rectF = new RectF(paddingLeft, paddingTop, vw - paddingRight, vh - paddingBottom);
             //  矩形需要缩小的值
             float i = borderWidth + borderSpace;
@@ -343,6 +343,14 @@ public class YLCircleImageView extends android.support.v7.widget.AppCompatImageV
         drawable.setBounds(0, 0, w, h);
         drawable.draw(canvas);
         return bitmap;
+    }
+
+    /**
+     * @param drawable true 可用  false 不可用
+     * @return
+     */
+    private boolean drawableDisable(Drawable drawable) {
+        return drawable != null && drawable.getIntrinsicWidth() > 0 && drawable.getIntrinsicHeight() > 0;
     }
 
     /////////////////////////////  set/get   /////////////////////////////
